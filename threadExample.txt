@@ -1,0 +1,35 @@
+public class Athread extends Thread {
+
+	@Override
+	public void run()
+	{
+		System.out.println("Thread "+Thread.currentThread().getName()+"state  1st call "+Thread.currentThread().getState());
+		
+		try {
+			Thread.sleep(100);
+			
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println("Thread "+Thread.currentThread().getName()+" state 2nd call "+Thread.currentThread().getState());
+	}
+	
+	public static void main(String[] args) {
+		Athread obj1=new Athread();
+		System.out.println(obj1.getState());
+		obj1.start();
+		System.out.println(obj1.getState());
+		
+		Athread obj2=new Athread();
+		obj2.getState();
+		obj2.start();
+		
+		Athread obj3=new Athread();
+		obj3.getState();
+		obj3.start();
+	}
+
+}
