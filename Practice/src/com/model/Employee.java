@@ -29,6 +29,55 @@ public class Employee {
 	}
 
 	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + ((dateOfJoining == null) ? 0 : dateOfJoining.hashCode());
+		result = prime * result + eId;
+		result = prime * result + ((eName == null) ? 0 : eName.hashCode());
+		result = prime * result + ((phoneNmuber == null) ? 0 : phoneNmuber.hashCode());
+		result = prime * result + (int) (salary ^ (salary >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (dateOfJoining == null) {
+			if (other.dateOfJoining != null)
+				return false;
+		} else if (!dateOfJoining.equals(other.dateOfJoining))
+			return false;
+		if (eId != other.eId)
+			return false;
+		if (eName == null) {
+			if (other.eName != null)
+				return false;
+		} else if (!eName.equals(other.eName))
+			return false;
+		if (phoneNmuber == null) {
+			if (other.phoneNmuber != null)
+				return false;
+		} else if (!phoneNmuber.equals(other.phoneNmuber))
+			return false;
+		if (salary != other.salary)
+			return false;
+		return true;
+	}
+
+	@Override
 	public String toString() {
 		return "Employee [eId=" + eId + ", eName=" + eName + ", dateOfJoining=" + dateOfJoining + ", address=" + address
 				+ ", salary=" + salary + ", phoneNmuber=" + phoneNmuber + "]";
