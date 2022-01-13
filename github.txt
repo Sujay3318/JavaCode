@@ -1,0 +1,14 @@
+** do git bash where u have .git file
+step1) git clone urlofrepository
+step2)create branch 
+git checkout -b branchname
+step3)	git status  
+	git log  cmd to check what is going on  
+step4) git add filename ot git add . 
+step5)git commit -m " "
+step6)when u are doing first time the set then set username 
+$  git config --global user.name "Sujay3318"
+now u can communate with github
+
+step6)git push -u orgin brachname
+as you are the only one who is working so no conflict we get

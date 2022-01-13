@@ -39,7 +39,6 @@ public class HashCodeEqualsContract {
 
 		// String is immutable as we try to concatenate new string will get created
 		String s6 = s4 + "abc";
-		
 
 		List<Long> phoneNumbers = new ArrayList<Long>();
 		phoneNumbers.add(0, (long) 12411214);
@@ -49,12 +48,14 @@ public class HashCodeEqualsContract {
 		Employee emp1 = new Employee(1, "sujay", dt, adr, 330000, phoneNumbers);
 		Employee emp2 = new Employee(1, "sujay", dt, adr, 330000, phoneNumbers);
 
-		//System.out.println(emp1.hashCode() == emp2.hashCode());//this will give false as i have not override the thinngs
+		// System.out.println(emp1.hashCode() == emp2.hashCode());//this will give false
+		// as i have not override the thinngs
 
-		//after overriding of hashCode and equals this will return true value
-		System.out.println("Equals of two same object after overriding the hascode anmd equals Output;->"+emp1.equals(emp2));
+		// after overriding of hashCode and equals this will return true value
+		System.out.println(
+				"Equals of two same object after overriding the hascode anmd equals Output;->" + emp1.equals(emp2));
 
-		System.out.println( emp1.hashCode() == emp2.hashCode());
+		System.out.println(emp1.hashCode() == emp2.hashCode());
 
 	}
 
