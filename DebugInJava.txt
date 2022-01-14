@@ -1,0 +1,11 @@
+step1 : add debug points
+step2: rightclick->debugAs -> javaApplication
+step3: step over -step by step debug
+step4:step into it will go into the functions so when functions the use it
+step5:right side you will see all variable data what does it contain and all
+step6: resume option directly go towards debug point
+step7: terminate option to stop debug
+
+***************Importanat Point****************
+let say you go to line no4 at that time till line no 3 all variable data u can see
+when u go towards line 5 line 4 all information of variable u can see
